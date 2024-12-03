@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --main-font: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: var(--main-font);
+}
+
+header {
+    background-color: #C0C0C0;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    margin-right: 2rem;
+    border: 2px;
+    color:  #4169E1;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #1E90FF
+}
+
+.c-forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c-forms__rows {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row label {
+    font-size: 15px;
+    
+}
+
+.form_control {
+    margin: 0 0 20px;
+}
+
+.c-forms__button {
+    height: 30px;
+    width: 100px;
+    background-color: #5f9ea0;
+    border: 1px;
+    border-radius: 40px;
+}
+
+.c-forms__button:hover {
+    background-color: #52cbcf;
+    cursor: pointer;
+}

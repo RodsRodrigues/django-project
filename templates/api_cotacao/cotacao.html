@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/css/cotacao.css' %}">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    {% include 'partials/_header.html' %}
+    <form action="{% url 'cotacao' %}" method="POST">
+        <div class="c-forms">
+            {% csrf_token %}
+            <div class="c-forms__title">
+                <h1>Buscar cotação</h1>
+            </div>
+            <div class="c-forms__rows">
+                {% for field in form.visible_fields %}
+                {% if not field.field.widget.attrs.hidden %}
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div>
+                <button type="submit" class="c-forms__button">Converter</button>
+            </div>
+        </div>
+    </form>
+</body>
+{% endblock %}
