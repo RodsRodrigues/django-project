@@ -1,7 +1,7 @@
 import os
 import django
 import datetime as dt
-from request import ApiRequest
+from .request import ApiRequest
 
 # Passar import do django após o setup
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'setup_django.settings')
